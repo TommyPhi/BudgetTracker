@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button onclick="incomeTab()">Income</button>
+        <button onclick="expenseTab()">Expense</button>
+    </nav>
+    <main>
+        <form id="income_form">
+            <h1>INCOME</h1>
+            <div class="input_section">
+                <label for="name_income" >Name of Income:</label>
+                <input id="name_income" name="name_income" type="text" autocomplete="off">
+            </div>
+            <div class="input_section">
+                <label for="income" >Add Income:</label>
+                <input id="income" name="income" type="number" autocomplete="off">
+                <button value="submit" id="incomeButton">Add Income</button>
+            </div>
+        </form>
+        <form id="expense_form">
+            <h1>EXPENSE</h1>
+            <div class="input_section">
+                <label for="name_expense" >Name of Expense:</label>
+                <input id="name_expense" name="name_expense" type="text" autocomplete="off">
+            </div>
+            <div class="input_section">
+                <label for="expense">Add Expense:</label>
+                <input id="expense" name="expense" type="number" autocomplete="off">
+                <button value="submit" id="expenseButton">Add Expense</button>
+            </div>
+        </form>
+        <div class="submain">
+            <h1 id="total_text">Total Budget: $0</h1>
+                <div class="income-expense-total">
+                    <div>
+                        <h3>Total Income</h3>
+                        <h2 id="income_total">$0</h2>
+                    </div>
+                    <div>
+                        <h3>Total Expenses</h3>
+                        <h2 id="expense_total">-$0</h2>
+                    </div>
+                </div>
+            <button id="resetBtn">Reset</button>
+        </div>
+        <div class="lists">
+            <div>
+                <h4>Income:</h4>
+                <ul id="income_list">
+                </ul>
+            </div>
+            <div>
+                <h4>Expenses:</h4>
+                <ul id="expense_list">
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
