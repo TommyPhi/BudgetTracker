@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar to switch between Income & Expense -->
     <nav>
         <button onclick="incomeTab()">Income</button>
         <button onclick="expenseTab()">Expense</button>
     </nav>
     <main>
+        <!-- Income Form -->
         <form id="income_form">
             <h1>INCOME</h1>
             <div class="input_section">
@@ -24,6 +26,7 @@
                 <button value="submit" id="incomeButton">Add Income</button>
             </div>
         </form>
+        <!-- Expense Form -->
         <form id="expense_form">
             <h1>EXPENSE</h1>
             <div class="input_section">
@@ -36,6 +39,7 @@
                 <button value="submit" id="expenseButton">Add Expense</button>
             </div>
         </form>
+        <!-- Display for Total, and sub-totals -->
         <div class="submain">
             <h1 id="total_text">Total Budget: $0</h1>
                 <div class="income-expense-total">
@@ -48,8 +52,10 @@
                         <h2 id="expense_total">-$0</h2>
                     </div>
                 </div>
+                <!-- Reset button to reset tracker -->
             <button id="resetBtn">Reset</button>
         </div>
+        <!-- Income List -->
         <div class="lists">
             <div>
                 <h4>Income:</h4>
@@ -57,6 +63,7 @@
                 </ul>
             </div>
             <div>
+        <!-- Expense List -->
                 <h4>Expenses:</h4>
                 <ul id="expense_list">
                 </ul>

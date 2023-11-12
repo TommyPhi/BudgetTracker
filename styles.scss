@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400;9..40,700&family=Poppins:wght@100;400;600&display=swap');
 
+// Color Variables
 $primary-color: white;
 $income-color: rgb(102, 229, 102);
 $expense-color: rgb(228, 139, 139);
+
+// Font Variables
 $main-font: 'DM Sans', sans-serif;
+
+// Mixin for Background Gradient
 @mixin bg-gradient($direction, $color1, $color2) {
     background: linear-gradient($direction, $color1 0%, $color2 100%);
 }
 
+//Placeholder Selectors
 %body-html {
     width: 100%;
     margin: 0;
@@ -27,6 +33,7 @@ $main-font: 'DM Sans', sans-serif;
     color: white;
 }
 
+// Navbar SCSS (Navigation Bar button)
 nav {
     display: flex;
 
@@ -47,6 +54,7 @@ nav {
     }
 }
 
+// Body SCSS (Forms & Background)
 body {
     @extend %body-html;
     @include bg-gradient(90deg, hsla(285, 42%, 33%, 1), hsla(333, 54%, 51%, 1));
@@ -152,6 +160,7 @@ body {
         }
     }
 
+    // Submain SCSS (Totals + Reset Button)
     .submain {
         display: flex;
         flex-direction: column;
@@ -223,6 +232,7 @@ body {
     }
 }
 
+// HTML SCSS
 html {
     @extend %body-html;
 }
